@@ -7,8 +7,7 @@ chrome.contextMenus.create({
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId === "Link") {
     const selectedText = info.selectionText;
-    //const archiveUrl = `https://${selectedText}`;
-    //const archiveUrl = https://www.${selectedText}.com;
+    const archiveUrl = `https://${selectedText}`;
     chrome.tabs.create({ url: archiveUrl });
   }
 });
